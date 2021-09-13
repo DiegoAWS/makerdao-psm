@@ -9,7 +9,7 @@ import ERC20Abi from './abi/ERC20.json';
 const Tokens = {
   DAI: 'DAI',
   USDC: 'USDC',
-  PAX: 'PAX',
+  USDP: 'USDP',
 };
 
 const admitedCollaterals = {
@@ -22,9 +22,9 @@ const admitedCollaterals = {
     abiToken: PsmAbi,
     decimals: 10 ** 6,
   },
-  PAX: {
+  USDP: {
     ilkTokenName: 'PSM-PAX-A',
-    nameToken: 'PAX',
+    nameToken: 'USDP',
     addressToken: '0x8E870D67F660D95d5be530380D0eC0bd388289E1',
     addressPSM: '0x961Ae24a1Ceba861D1FDf723794f6024Dc5485Cf',
     addressGemJoin: '0x7bbd8cA5e413bCa521C2c80D8d1908616894Cf21',

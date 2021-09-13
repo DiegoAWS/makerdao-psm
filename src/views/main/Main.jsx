@@ -10,7 +10,7 @@ import Input from '../../components/input/Input';
 import Select from '../../components/select/Select';
 import DAIImg from '../../assets/dai.png';
 import USDCImg from '../../assets/usdc.png';
-import PAXImg from '../../assets/pax.png';
+import USDPImg from '../../assets/usdp.png';
 import Button from '../../components/button/Button';
 import Info from '../../components/info/Info';
 import StatsImg from '../../assets/dollar.svg';
@@ -26,8 +26,8 @@ const currencies = [{
   image: USDCImg,
 },
 {
-  name: 'PAX',
-  image: PAXImg,
+  name: 'USDP',
+  image: USDPImg,
 },
 ];
 
