@@ -10,6 +10,7 @@ const Tokens = {
   DAI: 'DAI',
   USDC: 'USDC',
   PAX: 'PAX',
+  GUSD: 'GUSD',
 };
 
 const admitedCollaterals = {
@@ -30,6 +31,15 @@ const admitedCollaterals = {
     addressGemJoin: '0x7bbd8cA5e413bCa521C2c80D8d1908616894Cf21',
     abiToken: PsmAbi,
     decimals: 10 ** 18,
+  },
+  GUSD: {
+    ilkTokenName: 'PSM-GUSD-A',
+    nameToken: 'GUSD',
+    addressToken: '0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd',
+    addressPSM: '0x204659B2Fd2aD5723975c362Ce2230Fba11d3900',
+    addressGemJoin: '0x79A0FA989fb7ADf1F8e80C93ee605Ebb94F7c6A5',
+    abiToken: PsmAbi,
+    decimals: 10 ** 2,
   },
 };
 

@@ -11,6 +11,8 @@ import Select from '../../components/select/Select';
 import DAIImg from '../../assets/dai.png';
 import USDCImg from '../../assets/usdc.png';
 import PAXImg from '../../assets/pax.png';
+import GUSDImg from '../../assets/gusd.png';
+
 import Button from '../../components/button/Button';
 import Info from '../../components/info/Info';
 import StatsImg from '../../assets/dollar.svg';
@@ -28,6 +30,10 @@ const currencies = [{
 {
   name: 'PAX',
   image: PAXImg,
+},
+{
+  name: 'GUSD',
+  image: GUSDImg,
 },
 ];
 
