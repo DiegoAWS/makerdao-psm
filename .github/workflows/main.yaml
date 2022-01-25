@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build React App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+  deploy:
+    name: Deploy to IPFS and Pinnata service
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy to Pinnata
+      - uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+        with:
+          pin-name: 'PSM-Makerdao'
+          path: './build'
+          pinata-api-key: ${{ secrets.IPFS_PINATA_DEPLOY_ACTION_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.IPFS_PINATA_DEPLOY_ACTION_API_SECRET_KEY }}
+          verbose: true
+          remove-old: true
+      - name: Get the output hash
+        run: echo "The hash was ${{ steps.deploy.outputs.hash }}"
