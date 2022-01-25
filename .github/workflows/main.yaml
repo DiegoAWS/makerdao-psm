@@ -31,7 +31,7 @@ jobs:
           name: build
           path: build
       - name: Deploy to Pinnata
-      - uses: anantaramdas/ipfs-pinata-deploy-action@v1.6.4
+        uses: DSpotDevelopers/ipfs-pinata-deploy-action@v1.6.4
         with:
           pin-name: 'PSM-Makerdao'
           path: './build'
